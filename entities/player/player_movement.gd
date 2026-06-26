@@ -1,7 +1,7 @@
-extends PlayerComponent
+class_name Movement extends PlayerComponent
 
-@export var anim: AnimatedSprite2D
-@export var speed := 300.0
+@export var anim: AnimatedSprite3D
+@export var speed := 1.0
 
 const DIR_TABLE = [["nw", "n", "ne"], ["w", "x", "e"], ["sw", "s", "se"]]
 var prev_dir = "s"
@@ -9,7 +9,9 @@ var prev_dir = "s"
 func _physics_process(delta: float) -> void:
 	var input_direction := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down").normalized()
 
-	player.velocity = input_direction * speed
+	var movement_vector := Vector3(input_direction.x, 0.0, input_direction.y * 1.5).rotated(Vector3.UP, deg_to_rad(-45.0))
+
+	player.velocity = movement_vector * speed
 	
 	_play_anim(input_direction)
 	player.move_and_slide()

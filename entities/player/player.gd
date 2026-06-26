@@ -1,4 +1,4 @@
-extends CharacterBody2D
+extends CharacterBody3D
 
 var components: Array[PlayerComponent]
 
