@@ -5,11 +5,16 @@
 [ext_resource type="PackedScene" uid="uid://gg0rrcg2vxa5" path="res://entities/player/player.tscn" id="2_ak4vs"]
 [ext_resource type="PackedScene" uid="uid://dvwrkki6b5ays" path="res://scenes/overworld/prefabs/wall_corner.tscn" id="3_fd81m"]
 [ext_resource type="PackedScene" uid="uid://dp2gk1bpjfhjk" path="res://entities/enemy/enemy.tscn" id="5_saf08"]
+[ext_resource type="PackedScene" path="res://ui/inventory/inventory_hud.tscn" id="5_4lhlw"]
 
 [sub_resource type="Environment" id="Environment_nhulv"]
 background_mode = 2
 
 [node name="Overworld" type="Node3D" unique_id=782759061]
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=114034658]
+
+[node name="InventoryHUD" parent="UI" instance=ExtResource("5_4lhlw")]
 
 [node name="Floor" type="Node3D" parent="." unique_id=322475948]
 
