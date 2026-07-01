@@ -16,6 +16,8 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	for component in components:
 		component._physics_update(delta)
+	
+	AI.Blackboard.player_global_position = global_position
 
 func _process(delta: float) -> void:
 	for component in components:

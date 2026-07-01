@@ -14,6 +14,7 @@ script = ExtResource("1_6v113")
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=1301696195]
 transform = Transform3D(1.4142135, 0.70710677, -1.2247448, 0, 1.7320508, 1, 1.4142135, -0.70710677, 1.2247448, 0.08220839, 0.2013686, -0.08220839)
 offset = Vector2(0, 192)
+modulate = Color(0.18039216, 1, 1, 1)
 sprite_frames = ExtResource("2_sglur")
 animation = &"idle_e"
 

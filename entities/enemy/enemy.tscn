@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dp2gk1bpjfhjk"]
+
+[ext_resource type="Script" uid="uid://cttqnu106iefc" path="res://entities/enemy/dummy_enemy.gd" id="1_im2q6"]
+[ext_resource type="SpriteFrames" uid="uid://cospsx3j7beas" path="res://entities/player/sprites/player_sprite_frames.tres" id="2_mmjwh"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_sc77d"]
+radius = 1.4970703
+height = 2.9941406
+
+[node name="Enemy" type="CharacterBody3D" unique_id=1493058969]
+script = ExtResource("1_im2q6")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=1301696195]
+transform = Transform3D(1.4142135, 0.70710677, -1.2247448, 0, 1.7320508, 1, 1.4142135, -0.70710677, 1.2247448, 0.08220839, 0.2013686, -0.08220839)
+offset = Vector2(0, 192)
+modulate = Color(0.97843283, 0, 0.1721426, 1)
+sprite_frames = ExtResource("2_mmjwh")
+animation = &"idle_s"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=758657199]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3562012, 0)
+shape = SubResource("CapsuleShape3D_sc77d")
